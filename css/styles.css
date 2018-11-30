@@ -1,0 +1,31 @@
+/*Generelt*/
+body {
+  background-color: #e1f5fe;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px; }
+
+h1 {
+  font-size: 36pt; }
+
+h1, h2, h3, h4, h5 {
+  font-weight: bold; }
+
+/*
+Farver
+*/
+/*
+
+navigation
+
+*/
+.nav-wrapper {
+  padding: 0 70px; }
+
+.brand-logo img {
+  height: 50px; }
+
+/*
+forside
+*/
+
+/*# sourceMappingURL=styles.css.map */
