@@ -1,34 +1,51 @@
 /*Generelt*/
 
 body {
-  background-color: #e1f5fe;
-  font-family: 'Roboto', sans-serif;
   font-size: 20px;
+  font-family: 'Quatro', sans-serif;
 }
 
 h1{
-  font-size: 36pt;
-
+  font-size: 24pt;
+  font-family: 'Quatro Slab', serif;
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: bold;
+
 }
-
-
 
 /*
 Farver
 */
 
 $hvid: #ffffff;
-
+$moerkegroen: #05668d;
+$groen2: #028090;
+$groen3: #00a896;
+$groen4: #02c39a;
 
 /*
-
-navigation
-
+Mixins
 */
+
+@mixin button {
+  width: 50vw;
+  height: 15vw;
+  font-family: 'Quatro', sans-serif;
+  font-weight: 500;
+  font-size: 16pt;
+  color: $hvid;
+  background-color: $moerkegroen;
+  border: none;
+}
+
+/*
+navigation
+*/
+
+nav {
+  background-color: $moerkegroen;
+}
 
 .nav-wrapper {
   padding: 0 70px;
@@ -42,15 +59,115 @@ navigation
 forside
 */
 
+#boxTitle {
+  height: 375px;
+  padding: 33% 2.5vw;
 
+  #Title{
+    margin: 0;
+    color: $moerkegroen;
+    text-align: center;
+    font-weight: 600;
+  }
 
+  #subTitle {
+    font-family: 'Quatro Slab', serif;
+    font-size: 16pt;
+    color: $moerkegroen;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+  }
+}
 
+#weRecommend {
+  height: 375px;
+  background-color: $groen4;
+  text-align: center;
+  color: $hvid;
+  padding: 10vw;
 
+  h1 {
+    margin: 0;
+    font-weight: 600;
+  }
 
+  button {
+    @include button;
+  }
+}
 
+.productPlaceholder {
+  display: block;
+  height: 375px;
+  width: auto;
+}
 
+.proteinCategory {
+  height: 125px;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: $groen4;
 
+  button {
+    @include button;
+  }
+}
 
+#proteinBlog {
+  height: 250px;
+  text-align: center;
+  padding: 2.5vh;
+  background-color: $groen3;
 
+  h1 {
+    font-weight: 600;
+    color: $hvid;
+  }
 
+  button {
+    @include button;
+  }
+}
 
+#proteinTestimonial {
+  padding: 10vw;
+  color: $moerkegroen;
+
+  h1 {
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+#newsletter {
+  height: 375px;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: $groen4;
+
+  h1 {
+    font-weight: 600;
+    color: $hvid;
+  }
+
+  form {
+
+    input[type=text] {
+      background-color: $hvid;
+      padding: 0 2.5vw;
+      width: 66vw;
+      margin: 5vh;
+    }
+
+    input[type=submit] {
+      @include button
+    }
+  }
+}
+
+.page-footer {
+  background-color: $moerkegroen;
+  font-family: 'Quatro', sans-serif;
+}

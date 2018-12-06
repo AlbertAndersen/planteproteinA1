@@ -1,23 +1,24 @@
 /*Generelt*/
 body {
-  background-color: #e1f5fe;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px; }
+  font-size: 20px;
+  font-family: 'Quatro', sans-serif; }
 
 h1 {
-  font-size: 36pt; }
-
-h1, h2, h3, h4, h5 {
-  font-weight: bold; }
+  font-size: 24pt;
+  font-family: 'Quatro Slab', serif; }
 
 /*
 Farver
 */
 /*
-
-navigation
-
+Mixins
 */
+/*
+navigation
+*/
+nav {
+  background-color: #05668d; }
+
 .nav-wrapper {
   padding: 0 70px; }
 
@@ -27,5 +28,112 @@ navigation
 /*
 forside
 */
+#boxTitle {
+  height: 375px;
+  padding: 33% 2.5vw; }
+  #boxTitle #Title {
+    margin: 0;
+    color: #05668d;
+    text-align: center;
+    font-weight: 600; }
+  #boxTitle #subTitle {
+    font-family: 'Quatro Slab', serif;
+    font-size: 16pt;
+    color: #05668d;
+    text-align: center;
+    margin: 0;
+    font-weight: 600; }
+
+#weRecommend {
+  height: 375px;
+  background-color: #02c39a;
+  text-align: center;
+  color: #ffffff;
+  padding: 10vw; }
+  #weRecommend h1 {
+    margin: 0;
+    font-weight: 600; }
+  #weRecommend button {
+    width: 50vw;
+    height: 15vw;
+    font-family: 'Quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none; }
+
+.productPlaceholder {
+  display: block;
+  height: 375px;
+  width: auto; }
+
+.proteinCategory {
+  height: 125px;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: #02c39a; }
+  .proteinCategory button {
+    width: 50vw;
+    height: 15vw;
+    font-family: 'Quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none; }
+
+#proteinBlog {
+  height: 250px;
+  text-align: center;
+  padding: 2.5vh;
+  background-color: #00a896; }
+  #proteinBlog h1 {
+    font-weight: 600;
+    color: #ffffff; }
+  #proteinBlog button {
+    width: 50vw;
+    height: 15vw;
+    font-family: 'Quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none; }
+
+#proteinTestimonial {
+  padding: 10vw;
+  color: #05668d; }
+  #proteinTestimonial h1 {
+    text-align: center;
+    margin: 0;
+    font-weight: 600; }
+
+#newsletter {
+  height: 375px;
+  text-align: center;
+  padding: 5vh 0;
+  background-color: #02c39a; }
+  #newsletter h1 {
+    font-weight: 600;
+    color: #ffffff; }
+  #newsletter form input[type=text] {
+    background-color: #ffffff;
+    padding: 0 2.5vw;
+    width: 66vw;
+    margin: 5vh; }
+  #newsletter form input[type=submit] {
+    width: 50vw;
+    height: 15vw;
+    font-family: 'Quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none; }
+
+.page-footer {
+  background-color: #05668d;
+  font-family: 'Quatro', sans-serif; }
 
 /*# sourceMappingURL=styles.css.map */
