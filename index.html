@@ -18,6 +18,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gao5nrg.css">
     <script src="https://use.fontawesome.com/75970a48c3.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 </head>
@@ -45,7 +46,7 @@ Navigations bar
 </nav>
 
 <ul class="sidenav" id="mobile-demo">
-    <li><a href="#">lister</a></li>
+    <li><a href="#">Lister</a></li>
     <li><a href="undersider/blog.html">Blog</a></li>
     <li><a href="#">Anmeldelser</a></li>
     <li><a href="#">Podcast</a></li>
@@ -56,35 +57,114 @@ Navigations bar
 <!--
 Navigations bar
 -->
+<div id="boxTitle">
+    <h1 id="Title">Plante Protein</h1>
+    <p id="subTitle">Danmarks eneste <br> veganske proteinshop</p>
+</div>
+<div id="weRecommend">
+    <h1>Vi Anbefaler</h1>
+    <div id="weRecommendBox">
+        <div id="graphicPlaceholder"></div>
+        <div id="recommendText">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis
+            </p>
+            <button>Se Produkter</button>
+        </div>
+    </div>
+</div>
 
-<h1>Indhold</h1>
+<div id="productBox">
+    <div>
+        <img class="productPlaceholder" src="images/productPlaceholder.jpg">
+        <div class="proteinCategory">
+            <button>Proteinpulver</button>
+        </div>
+    </div>
+    <div>
+        <img class="productPlaceholder" src="images/productPlaceholder.jpg">
+        <div class="proteinCategory">
+            <button>Proteinbarer</button>
+        </div>
+    </div>
+    <div id="productSupplements">
+        <img class="productPlaceholder" src="images/productPlaceholder.jpg">
+        <div class="proteinCategory">
+            <button>Kosttilskud</button>
+        </div>
+    </div>
 
+</div>
 
+<div id="proteinBlog">
+    <h1>Blog</h1>
+    <button>Læs her</button>
+</div>
+<div id="proteinTestimonial">
+    <h1>Vores Kunder Siger</h1>
+    <div id="proteinTestimonialBox">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            Duis aute irure dolor in reprehenderit in voluptate velit
+        </p>
+    </div>
+</div>
+<div id="newsletter">
+    <h1>Nyhedsbrev</h1>
+    <form>
+        <form>
+            <input type="text" name="mail" placeholder="Mail">
+            <input type="submit" value="Submit">
+        </form>
+    </form>
+</div>
 <!--Footer-->
 
 <footer class="page-footer ">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">Animations lounge</h5>
-                <p class="grey-text text-lighten-4">Animations lounge er er et fælleskab for danske animationsfilm elskere<br>Alle filmbilleder er tager fra themoviedb.org</p>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="#!">Handelsbetingelser</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Levering</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Persondatapolitik</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Cookiepolitik</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">FAQ</a></li>
+                </ul>
             </div>
             <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Blog indlæg</h5>
                 <ul>
-                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Stærke kvindelige hovedpersoner</a></li>
-                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Hvordan animationsfilm afspejler samfundsmæssige problemstillinger</a></li>
-                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Nostalgi tema: hvilken film ændrede DIT liv</a></li>
-                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Japansk kultur</a></li>
+                    <li>Plante Protein</li>
+                    <li>Dadevej 32<br>4171 Glumsø<br>Danmark</li>
+                    <li>CVR: 28055978</li>
+                    <li>Mail: info@plante-protein.dk</li>
+                    <li>Tlf.: +45 30579333</li>
                 </ul>
+                <div id="SoMe">
+                    <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                    <a id="topProtein">
+                        <i class="fas fa-angle-up fa-2x"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Animation lounge © 2018
-            <a class="grey-text text-lighten-4 right" href="#!" style="padding: 0px 10px"><i class="fab fa-instagram fa-2x"></i></a>
-            <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
+            Plante Protein © 2018
         </div>
     </div>
 </footer>
@@ -92,21 +172,19 @@ Navigations bar
 <!--Alle scripts -->
 
 <script>
-
     $(document).ready(function () { //kører først når dokumentet er klar
 
+        $('#topProtein').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 500);
+        });
+
         $('.sidenav').sidenav(); //fortæller at materilize at vi bruger deres navbar
-
-
-
     });
-
 </script>
-
 <!--loader materilize-->
 <script type="text/javascript" src="js/materialize.js"> </script>
-
-
 </body>
 </html>
 

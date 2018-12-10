@@ -1,34 +1,60 @@
 /*Generelt*/
 
 body {
-  background-color: #e1f5fe;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-family: 'quatro', sans-serif;
+  font-size: 14pt;
+  overflow-x: hidden;
 }
 
 h1{
-  font-size: 36pt;
-
+  font-family: 'quatro-slab', serif;
+  font-weight: 600;
+  font-size: 24pt;
+  text-align: center;
 }
 
 h1, h2, h3, h4, h5 {
-  font-weight: bold;
 }
-
-
 
 /*
 Farver
 */
 
 $hvid: #ffffff;
-
+$moerkegroen: #05668d;
+$groen2: #028090;
+$groen3: #00a896;
+$groen4: #02c39a;
 
 /*
-
-navigation
-
+Mixins
 */
+
+@mixin button {
+  width: 175px;
+  height: 55px;
+  font-family: 'quatro', sans-serif;
+  font-weight: 500;
+  font-size: 16pt;
+  color: $hvid;
+  background-color: $moerkegroen;
+  border: none;
+  transition: 0.25s;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1,1.1);
+    transition: 0.25s;
+  }
+}
+
+/*
+navigation
+*/
+
+nav {
+  background-color: $moerkegroen;
+}
 
 .nav-wrapper {
   padding: 0 70px;
@@ -42,15 +68,286 @@ navigation
 forside
 */
 
+#boxTitle {
+  height: 375px;
+  padding-top: 125px;
+  background-image: url("../images/graphicPlaceholder2.png");
+  background-size: cover;
+  background-position: center;
 
+  #Title{
+    margin: 0;
+    color: $moerkegroen;
+    text-align: center;
+    font-weight: 600;
+  }
 
+  #subTitle {
+    font-family: 'quatro-slab', serif;
+    font-size: 16pt;
+    color: $moerkegroen;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+  }
+}
 
+#graphicPlaceholder {
+  display: none;
+}
 
+#weRecommend {
+  height: 375px;
+  background-color: $groen4;
+  text-align: center;
+  color: $hvid;
+  padding: 40px;
 
+  h1 {
+    margin: 0;
+  }
 
+  button {
+    @include button;
+  }
+}
 
+.productPlaceholder {
+  display: block;
+  height: 375px;
+  width: auto;
+}
 
+.proteinCategory {
+  height: 125px;
+  text-align: center;
+  padding: 35px 0;
+  background-color: $groen4;
 
+  button {
+    @include button;
+  }
+}
 
+#proteinBlog {
+  height: 250px;
+  text-align: center;
+  padding: 25px;
+  background-color: $groen3;
 
+  h1 {
+    color: $hvid;
+  }
 
+  button {
+    @include button;
+  }
+}
+
+#proteinTestimonial {
+  padding: 40px;
+  color: $moerkegroen;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+#newsletter {
+  height: 375px;
+  text-align: center;
+  padding: 35px 0;
+  background-color: $groen4;
+
+  h1 {
+    color: $hvid;
+  }
+
+  form {
+
+    input[type=text] {
+      background-color: $hvid;
+      padding: 0 10px;
+      width: 250px;
+      margin: 35px;
+    }
+
+    input[type=submit] {
+      @include button
+    }
+  }
+}
+
+.page-footer {
+  background-color: $moerkegroen;
+  font-family: 'quatro', sans-serif;
+
+    li {
+      padding-bottom: 20px;
+    }
+
+  #SoMe {
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: $hvid;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  // Alt der ændres i tablet stående fra mobil
+
+  #boxTitle {
+    height: 94vh;
+    padding-top: 33vh;
+
+    #Title{
+      font-size: 48pt;
+    }
+
+    #subTitle {
+      font-size: 24pt;
+    }
+  }
+
+  #weRecommend {
+    padding: 0;
+
+    h1{
+      padding: 2.5vh 0;
+    }
+
+    #weRecommendBox {
+      display: flex;
+
+      #graphicPlaceholder {
+        display: block;
+        width: 375px;
+        height: 375px;
+        background-image: url("../images/graphicPlaceholder.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      #recommendText {
+        width: 375px;
+        height: 375px;
+        padding: 0 5vw 5vw 5vw;
+      }
+    }
+  }
+
+  #productBox {
+    display: flex;
+
+    .productPlaceholder {
+      width: 50vw;
+      height: auto;
+    }
+
+    #productSupplements {
+      display: none;
+    }
+  }
+
+  #newsletter {
+    height: 250px;
+
+    h1 {
+      margin: 0 0 40px 0;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+}
+
+@media screen and (min-width: 1200px) {
+  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  #weRecommend {
+    height: 640px;
+    padding: 0;
+
+    h1{
+      padding: 5vh 0;
+    }
+
+    #weRecommendBox {
+      display: flex;
+      overflow: hidden;
+
+      #graphicPlaceholder {
+        width: 50vw;
+        height: 960px;
+      }
+
+      #recommendText {
+        width: 50vw;
+        padding: 15vh 15vw;
+      }
+    }
+  }
+
+  #productBox {
+    display: flex;
+
+    .productPlaceholder {
+      width: 33vw;
+      height: auto;
+    }
+
+    .proteinCategory {
+      width: 33vw;
+    }
+
+    #productSupplements {
+      display: block;
+    }
+  }
+
+  #proteinTestimonial {
+
+    #proteinTestimonialBox {
+      display: flex;
+      padding: 2.5vw 5vw;
+    }
+
+    p {
+      padding: 2.5vw 5vw;
+    }
+  }
+
+  #proteinBlog {
+
+    button {
+      margin: 0 40%;
+    }
+  }
+
+  #topProtein {
+    color: $hvid;
+    cursor: pointer;
+    position: fixed;
+    bottom: 70px;
+    right: 120px;
+    background-color: $moerkegroen;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    transition: 0.25s;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.1,1.1);
+      transition: 0.25s;
+    }
+  }
+}
+
+@media print {
+  // Alt der gælder for print specifikt
+}
