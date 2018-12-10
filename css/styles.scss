@@ -3,6 +3,7 @@
 body {
   font-family: 'quatro', sans-serif;
   font-size: 14pt;
+  overflow-x: hidden;
 }
 
 h1{
@@ -293,11 +294,14 @@ forside
 
   #productBox {
     display: flex;
-    overflow: hidden;
 
     .productPlaceholder {
-      width: 33.3vw;
+      width: 33vw;
       height: auto;
+    }
+
+    .proteinCategory {
+      width: 33vw;
     }
 
     #productSupplements {
@@ -318,24 +322,29 @@ forside
   }
 
   #proteinBlog {
-    height: 250px;
-    text-align: center;
-    padding: 25px;
-    background-color: $groen3;
-
-    h1 {
-      color: $hvid;
-    }
 
     button {
-      margin: 0 45.8%;
+      margin: 0 40%;
     }
   }
 
   #topProtein {
     color: $hvid;
-    border: $moerkegroen;
     cursor: pointer;
+    position: fixed;
+    bottom: 70px;
+    right: 120px;
+    background-color: $moerkegroen;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    transition: 0.25s;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.1,1.1);
+      transition: 0.25s;
+    }
   }
 }
 

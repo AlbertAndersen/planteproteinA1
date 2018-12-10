@@ -1,7 +1,8 @@
 /*Generelt*/
 body {
   font-family: 'quatro', sans-serif;
-  font-size: 14pt; }
+  font-size: 14pt;
+  overflow-x: hidden; }
 
 h1 {
   font-family: 'quatro-slab', serif;
@@ -222,11 +223,12 @@ forside
         padding: 15vh 15vw; }
 
   #productBox {
-    display: flex;
-    overflow: hidden; }
+    display: flex; }
     #productBox .productPlaceholder {
-      width: 33.3vw;
+      width: 33vw;
       height: auto; }
+    #productBox .proteinCategory {
+      width: 33vw; }
     #productBox #productSupplements {
       display: block; }
 
@@ -236,19 +238,23 @@ forside
   #proteinTestimonial p {
     padding: 2.5vw 5vw; }
 
-  #proteinBlog {
-    height: 250px;
-    text-align: center;
-    padding: 25px;
-    background-color: #00a896; }
-    #proteinBlog h1 {
-      color: #ffffff; }
-    #proteinBlog button {
-      margin: 0 45.8%; }
+  #proteinBlog button {
+    margin: 0 40%; }
 
   #topProtein {
     color: #ffffff;
-    border: #05668d;
-    cursor: pointer; } }
+    cursor: pointer;
+    position: fixed;
+    bottom: 70px;
+    right: 120px;
+    background-color: #05668d;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    transition: 0.25s;
+    text-align: center; }
+    #topProtein:hover {
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; } }
 
 /*# sourceMappingURL=styles.css.map */
