@@ -1,11 +1,7 @@
 /*Generelt*/
 
 body {
-
-
-  font-family: quatro, sans-serif;
   font-style: normal;
-
   font-family: 'quatro', sans-serif;
   font-size: 14pt;
   overflow-x: hidden;
@@ -74,7 +70,6 @@ nav {
 /*
 forside
 */
-
 
 //PRODUKTSIDE START
 .gridomdethele{
@@ -153,24 +148,6 @@ forside
 
 //PRODUKTSIDE SLUT
 
-// Variabler - med størrelser
-
-@media screen and (min-width: 768px) {
-  // Alt der ændres i tablet stående fra mobil
-}
-
-@media screen and (min-width: 992px) {
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-
-}
-
-@media screen and (min-width: 1200px) {
-  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
-}
-@media print {
-  // Alt der gælder for print specifikt
-}
-
 #boxTitle {
   height: 425px;
   padding-top: 175px;
@@ -230,6 +207,7 @@ forside
   text-align: center;
   padding: 35px 0;
   background-color: $groen4;
+  color: $hvid;
 
   button {
     @include button;
@@ -304,6 +282,60 @@ forside
   }
 }
 
+#boxProduct {
+  height: 425px;
+  padding-top: 200px;
+  background-image: url("../images/graphicPlaceholder2.png");
+  background-size: cover;
+  background-position: center;
+
+  #Product{
+    margin: 0;
+    color: $moerkegroen;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+#productPage {
+  height: 375px;
+  background-color: $groen4;
+  text-align: center;
+  color: $hvid;
+  padding: 40px;
+
+  h1 {
+    margin: 0;
+  }
+
+  button {
+    @include button;
+  }
+
+  #productText p {
+    text-align: start;
+  }
+}
+
+#categoryBox {
+  display: flex;
+  flex-flow: row wrap;
+
+  img {
+    width: 50vw;
+    height: auto;
+  }
+
+  .proteinCategory {
+    width: 50vw;
+    height: 125px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
 
@@ -365,6 +397,25 @@ forside
 
     h1 {
       margin: 0 0 40px 0;
+    }
+  }
+
+  #productPage {
+
+    #productText p {
+      margin: 5vw 25vw;
+      text-align: start;
+    }
+  }
+
+  #categoryBox {
+    .proteinCategory {
+      width: 50vw;
+      height: 125px;
+
+      p {
+        margin-top: 15px;
+      }
     }
   }
 }
@@ -449,6 +500,16 @@ forside
     }
   }
 
+  #newsletter {
+    height: auto;
+    display: flex;
+    padding-left: 27.5vw;
+
+    h1 {
+      margin-top: 40px;
+    }
+  }
+
   #topProtein {
     color: $hvid;
     cursor: pointer;
@@ -465,6 +526,31 @@ forside
     &:hover {
       transform: scale(1.1,1.1);
       transition: 0.25s;
+    }
+  }
+
+  #productPage {
+
+    #productText p {
+      margin: 3vw 25vw;
+      text-align: start;
+    }
+  }
+
+  #categoryBox {
+    width: 100vw;
+
+    img {
+      width: 25vw;
+    }
+
+    .proteinCategory {
+      width: 25vw;
+      height: 125px;
+
+      p {
+        margin-top: 15px;
+      }
     }
   }
 }

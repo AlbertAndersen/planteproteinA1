@@ -1,12 +1,9 @@
 /*Generelt*/
 body {
-
-
-
+  font-style: normal;
   font-family: 'quatro', sans-serif;
   font-size: 14pt;
   overflow-x: hidden; }
-
 
 h1 {
   font-family: 'quatro-slab', serif;
@@ -36,7 +33,6 @@ nav {
 /*
 forside
 */
-
 .gridomdethele {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; }
@@ -154,7 +150,8 @@ forside
   height: 125px;
   text-align: center;
   padding: 35px 0;
-  background-color: #02c39a; }
+  background-color: #02c39a;
+  color: #ffffff; }
   .proteinCategory button {
     width: 175px;
     height: 55px;
@@ -236,6 +233,55 @@ forside
     .page-footer #SoMe a {
       color: #ffffff; }
 
+#boxProduct {
+  height: 425px;
+  padding-top: 200px;
+  background-image: url("../images/graphicPlaceholder2.png");
+  background-size: cover;
+  background-position: center; }
+  #boxProduct #Product {
+    margin: 0;
+    color: #05668d;
+    text-align: center;
+    font-weight: 600; }
+
+#productPage {
+  height: 375px;
+  background-color: #02c39a;
+  text-align: center;
+  color: #ffffff;
+  padding: 40px; }
+  #productPage h1 {
+    margin: 0; }
+  #productPage button {
+    width: 175px;
+    height: 55px;
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none;
+    transition: 0.25s; }
+    #productPage button:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+  #productPage #productText p {
+    text-align: start; }
+
+#categoryBox {
+  display: flex;
+  flex-flow: row wrap; }
+  #categoryBox img {
+    width: 50vw;
+    height: auto; }
+  #categoryBox .proteinCategory {
+    width: 50vw;
+    height: 125px; }
+    #categoryBox .proteinCategory p {
+      margin: 0; }
+
 @media screen and (min-width: 768px) {
   #boxTitle {
     height: 512px;
@@ -274,7 +320,17 @@ forside
   #newsletter {
     height: 250px; }
     #newsletter h1 {
-      margin: 0 0 40px 0; } }
+      margin: 0 0 40px 0; }
+
+  #productPage #productText p {
+    margin: 5vw 25vw;
+    text-align: start; }
+
+  #categoryBox .proteinCategory {
+    width: 50vw;
+    height: 125px; }
+    #categoryBox .proteinCategory p {
+      margin-top: 15px; } }
 @media screen and (min-width: 1200px) {
   #boxTitle {
     height: 100vh;
@@ -318,6 +374,13 @@ forside
   #proteinBlog button {
     margin: 0 40%; }
 
+  #newsletter {
+    height: auto;
+    display: flex;
+    padding-left: 27.5vw; }
+    #newsletter h1 {
+      margin-top: 40px; }
+
   #topProtein {
     color: #ffffff;
     cursor: pointer;
@@ -332,7 +395,20 @@ forside
     text-align: center; }
     #topProtein:hover {
       transform: scale(1.1, 1.1);
-      transition: 0.25s; } }
+      transition: 0.25s; }
 
+  #productPage #productText p {
+    margin: 3vw 25vw;
+    text-align: start; }
+
+  #categoryBox {
+    width: 100vw; }
+    #categoryBox img {
+      width: 25vw; }
+    #categoryBox .proteinCategory {
+      width: 25vw;
+      height: 125px; }
+      #categoryBox .proteinCategory p {
+        margin-top: 15px; } }
 
 /*# sourceMappingURL=styles.css.map */
