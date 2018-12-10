@@ -3,7 +3,7 @@
 body {
 
 
-  font-family: quatro, sans-serif;
+
   font-style: normal;
 
   font-family: 'quatro', sans-serif;
@@ -122,9 +122,12 @@ forside
   }
 }
 
+
+
 .onecolumn{
   grid-column: 1/17;
 }
+
 
 .checkboks{
   grid-column: 1/17;
@@ -133,6 +136,7 @@ forside
     margin: 10px 10px 0 0;
   }
 }
+
 
 .andre{
   background-color: #02c39a;
@@ -149,6 +153,63 @@ forside
 .to{
   grid-column: 9/17;
 }
+
+//blog
+
+.blogQuote {
+  font-size: 24px;
+}
+
+.blogPost{
+  padding: 5vw;
+}
+
+.andreBlog {
+
+  list-style-type: circle;
+
+  padding: 5vw;
+  background-color: $moerkegroen;
+  color: white;
+
+  a{
+
+    color: white;
+
+  }
+
+}
+
+#boxTitle2 {
+  height: 375px;
+  padding-top: 125px;
+  background-image: url("../images/graphicPlaceholder2.png");
+  background-size: cover;
+  background-position: center;
+
+  #Title2{
+    margin: 0;
+    color: $moerkegroen;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  #subTitle2 {
+    font-size: 16pt;
+    color: $moerkegroen;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+
+
 
 //PRODUKTSIDE SLUT
 
@@ -302,6 +363,8 @@ forside
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
 
+
+
   #boxTitle {
     height: 94vh;
     padding-top: 33vh;
@@ -362,6 +425,21 @@ forside
       margin: 0 0 40px 0;
     }
   }
+
+  //blog
+
+  .blogPost{
+
+    padding: 5vw 15vw;
+
+  }
+
+  .andreBlog {
+
+
+    padding: 5vw 15vw;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
