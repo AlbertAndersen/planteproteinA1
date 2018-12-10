@@ -4324,7 +4324,7 @@ nav .nav-wrapper {
 }
 
 nav .sidenav-trigger {
-  float: left;
+  float: right;
   position: relative;
   z-index: 1;
   height: 56px;
@@ -4352,7 +4352,7 @@ nav .brand-logo.center {
 
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
-    left: 50%;
+    right: 60%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
