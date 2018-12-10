@@ -60,6 +60,7 @@ navigation
 
 nav {
   background-color: $moerkegroen;
+  position: fixed;
 }
 
 .nav-wrapper {
@@ -171,8 +172,8 @@ forside
 }
 
 #boxTitle {
-  height: 375px;
-  padding-top: 125px;
+  height: 425px;
+  padding-top: 175px;
   background-image: url("../images/graphicPlaceholder2.png");
   background-size: cover;
   background-position: center;
@@ -211,6 +212,10 @@ forside
 
   button {
     @include button;
+  }
+
+  #recommendText p {
+    text-align: start;
   }
 }
 
@@ -303,8 +308,8 @@ forside
   // Alt der ændres i tablet stående fra mobil
 
   #boxTitle {
-    height: 94vh;
-    padding-top: 33vh;
+    height: 512px;
+    padding-top: 206px;
 
     #Title{
       font-size: 48pt;
@@ -370,6 +375,19 @@ forside
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  #boxTitle {
+    height: 100vh;
+    padding-top: 40vh;
+
+    #Title{
+      font-size: 48pt;
+    }
+
+    #subTitle {
+      font-size: 24pt;
+    }
+  }
 
   #weRecommend {
     height: 640px;

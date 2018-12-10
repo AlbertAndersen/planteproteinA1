@@ -24,7 +24,8 @@ Mixins
 navigation
 */
 nav {
-  background-color: #05668d; }
+  background-color: #05668d;
+  position: fixed; }
 
 .nav-wrapper {
   padding: 0 70px; }
@@ -98,8 +99,8 @@ forside
   grid-column: 9/17; }
 
 #boxTitle {
-  height: 375px;
-  padding-top: 125px;
+  height: 425px;
+  padding-top: 175px;
   background-image: url("../images/graphicPlaceholder2.png");
   background-size: cover;
   background-position: center; }
@@ -141,6 +142,8 @@ forside
       cursor: pointer;
       transform: scale(1.1, 1.1);
       transition: 0.25s; }
+  #weRecommend #recommendText p {
+    text-align: start; }
 
 .productPlaceholder {
   display: block;
@@ -235,8 +238,8 @@ forside
 
 @media screen and (min-width: 768px) {
   #boxTitle {
-    height: 94vh;
-    padding-top: 33vh; }
+    height: 512px;
+    padding-top: 206px; }
     #boxTitle #Title {
       font-size: 48pt; }
     #boxTitle #subTitle {
@@ -273,6 +276,14 @@ forside
     #newsletter h1 {
       margin: 0 0 40px 0; } }
 @media screen and (min-width: 1200px) {
+  #boxTitle {
+    height: 100vh;
+    padding-top: 40vh; }
+    #boxTitle #Title {
+      font-size: 48pt; }
+    #boxTitle #subTitle {
+      font-size: 24pt; }
+
   #weRecommend {
     height: 640px;
     padding: 0; }
