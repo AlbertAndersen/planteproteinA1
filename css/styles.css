@@ -1,8 +1,9 @@
 /*Generelt*/
 body {
   background-color: #e1f5fe;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px; }
+  font-family: quatro, sans-serif;
+  font-style: normal;
+  font-weight: 100; }
 
 h1 {
   font-size: 36pt; }
@@ -27,5 +28,65 @@ navigation
 /*
 forside
 */
+.gridomdethele {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; }
+
+.hovedproduktbillede {
+  background-color: #00a896;
+  max-height: 400px;
+  grid-column: 1/17; }
+
+.knap {
+  background-color: #05668d;
+  height: 50px;
+  text-align: center;
+  grid-column: 1/17;
+  margin-top: 5%; }
+
+#text {
+  display: none; }
+
+#text2 {
+  display: none; }
+
+.mobilmargin {
+  margin: 5% 10%; }
+
+.smagogantal {
+  background-color: #05668d;
+  display: flex;
+  padding: 5%;
+  justify-content: space-around; }
+
+.smag {
+  grid-column: 1/9; }
+
+.antal {
+  grid-column: 9/17; }
+  .antal input {
+    color: #fff; }
+
+.onecolumn {
+  grid-column: 1/17; }
+
+.checkboks {
+  grid-column: 1/17; }
+  .checkboks .fa-check-circle {
+    color: #05668d;
+    margin: 10px 10px 0 0; }
+
+.andre {
+  background-color: #02c39a; }
+
+.underproduktbillede {
+  background-color: #00a896;
+  max-height: 200px; }
+
+.et {
+  grid-column: 1/9; }
+
+.to {
+  grid-column: 9/17; }
 
 /*# sourceMappingURL=styles.css.map */
