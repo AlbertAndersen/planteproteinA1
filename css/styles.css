@@ -22,7 +22,8 @@ navigation
 */
 nav {
   background-color: #05668d;
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
 
 .nav-wrapper {
   padding: 0 70px; }
@@ -282,6 +283,42 @@ forside
     #categoryBox .proteinCategory p {
       margin: 0; }
 
+.categoryButton {
+  background-color: #02c39a; }
+  .categoryButton button {
+    width: 175px;
+    height: 55px;
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none;
+    transition: 0.25s;
+    width: 100%; }
+    .categoryButton button:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+
+#productFilter {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: #05668d;
+  color: #ffffff; }
+  #productFilter p {
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    width: 50%; }
+  #productFilter select {
+    background-color: #ffffff;
+    color: #05668d;
+    height: 40px;
+    width: 50%; }
+
 @media screen and (min-width: 768px) {
   #boxTitle {
     height: 512px;
@@ -397,6 +434,7 @@ forside
       margin-top: 40px; }
 
   #topProtein {
+    display: none;
     color: #ffffff;
     cursor: pointer;
     position: fixed;
@@ -416,6 +454,26 @@ forside
     margin: 3vw 25vw;
     text-align: start; }
 
+  #productFilter {
+    display: flex;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+    background-color: #05668d;
+    color: #ffffff;
+    padding: 45px 75px; }
+    #productFilter p {
+      padding-right: 25px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      width: auto; }
+    #productFilter select {
+      background-color: #ffffff;
+      color: #05668d;
+      height: 40px;
+      width: 175px; }
+
   #categoryBox {
     width: 100vw; }
     #categoryBox img {
@@ -423,6 +481,7 @@ forside
     #categoryBox .hoverBox {
       position: relative; }
     #categoryBox .categoryButton {
+      background-color: transparent;
       position: absolute;
       top: 0;
       bottom: 0;
