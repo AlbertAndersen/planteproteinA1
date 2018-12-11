@@ -357,11 +357,26 @@ forside
 
   #productBox {
     display: flex; }
+    #productBox .hoverBox {
+      position: relative; }
+    #productBox .hoverBox:hover .proteinCategory {
+      opacity: 1; }
     #productBox .productPlaceholder {
-      width: 33vw;
-      height: auto; }
+      height: auto;
+      display: block;
+      width: 100%; }
     #productBox .proteinCategory {
-      width: 33vw; }
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease; }
+      #productBox .proteinCategory button {
+        margin: 25vh 0; }
     #productBox #productSupplements {
       display: block; }
 
@@ -405,10 +420,42 @@ forside
     width: 100vw; }
     #categoryBox img {
       width: 25vw; }
+    #categoryBox .hoverBox {
+      position: relative; }
+    #categoryBox .categoryButton {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease; }
+      #categoryBox .categoryButton button {
+        margin: 25vh 100px;
+        width: 175px;
+        height: 55px;
+        font-family: 'quatro', sans-serif;
+        font-weight: 500;
+        font-size: 16pt;
+        color: #ffffff;
+        background-color: #05668d;
+        border: none;
+        transition: 0.25s; }
+        #categoryBox .categoryButton button:hover {
+          cursor: pointer;
+          transform: scale(1.1, 1.1);
+          transition: 0.25s; }
+    #categoryBox .hoverBox:hover .categoryButton {
+      opacity: 1; }
     #categoryBox .proteinCategory {
       width: 25vw;
       height: 125px; }
       #categoryBox .proteinCategory p {
-        margin-top: 15px; } }
+        margin-top: 15px; }
+
+  #Product {
+    font-size: 48pt; } }
 
 /*# sourceMappingURL=styles.css.map */

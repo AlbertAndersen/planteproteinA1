@@ -467,13 +467,34 @@ forside
   #productBox {
     display: flex;
 
+    .hoverBox {
+      position: relative;
+    }
+
+    .hoverBox:hover .proteinCategory {
+      opacity: 1;
+    }
+
     .productPlaceholder {
-      width: 33vw;
       height: auto;
+      display: block;
+      width: 100%;
     }
 
     .proteinCategory {
-      width: 33vw;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease;
+
+      button {
+        margin: 25vh 0;
+      }
     }
 
     #productSupplements {
@@ -544,6 +565,31 @@ forside
       width: 25vw;
     }
 
+    .hoverBox {
+      position: relative;
+    }
+
+    .categoryButton {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease;
+
+      button {
+        margin: 25vh 100px;
+        @include button;
+      }
+    }
+
+    .hoverBox:hover .categoryButton{
+      opacity: 1;
+    }
+
     .proteinCategory {
       width: 25vw;
       height: 125px;
@@ -552,6 +598,10 @@ forside
         margin-top: 15px;
       }
     }
+  }
+
+  #Product{
+    font-size: 48pt;
   }
 }
 
