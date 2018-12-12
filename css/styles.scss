@@ -297,7 +297,7 @@ forside
 #boxProduct {
   height: 425px;
   padding-top: 200px;
-  background-image: url("../images/graphicPlaceholder2.png");
+  background-image: url("../images/graphic3.png");
   background-size: cover;
   background-position: center;
 
@@ -410,6 +410,9 @@ forside
 
   #weRecommend {
     padding: 0;
+    background-image: url("../images/graphic2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     h1{
       padding: 2.5vh 0;
@@ -422,9 +425,6 @@ forside
         display: block;
         width: 375px;
         height: 375px;
-        background-image: url("../images/graphicPlaceholder.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
 
       #recommendText {
