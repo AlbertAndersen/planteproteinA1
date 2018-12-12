@@ -28,8 +28,16 @@ nav {
 .nav-wrapper {
   padding: 0 70px; }
 
+nav .brand-logo {
+  right: 65%; }
+
 .brand-logo img {
-  height: 50px; }
+  margin-top: 5px;
+  height: 45px;
+  transition: 0.25s; }
+  .brand-logo img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.25s; }
 
 /*
 forside
@@ -98,7 +106,7 @@ forside
 #boxTitle {
   height: 425px;
   padding-top: 175px;
-  background-image: url("../images/graphicPlaceholder2.png");
+  background-image: url("../images/graphic1.png");
   background-size: cover;
   background-position: center; }
   #boxTitle #Title {
@@ -273,7 +281,8 @@ forside
 
 #categoryBox {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  width: 100vw; }
   #categoryBox img {
     width: 50vw;
     height: auto; }
@@ -320,9 +329,16 @@ forside
     width: 50%; }
 
 @media screen and (min-width: 768px) {
+  nav .brand-logo {
+    right: 80%; }
+
+  .brand-logo img {
+    margin: 10px 0 0 0; }
+
   #boxTitle {
     height: 512px;
-    padding-top: 206px; }
+    padding-top: 206px;
+    background-position: left; }
     #boxTitle #Title {
       font-size: 48pt; }
     #boxTitle #subTitle {
@@ -369,6 +385,9 @@ forside
     #categoryBox .proteinCategory p {
       margin-top: 15px; } }
 @media screen and (min-width: 1200px) {
+  nav .brand-logo {
+    right: 90%; }
+
   #boxTitle {
     height: 100vh;
     padding-top: 40vh; }
@@ -515,6 +534,12 @@ forside
         margin-top: 15px; }
 
   #Product {
-    font-size: 48pt; } }
+    font-size: 48pt; }
+
+  .fa-instagram, .fa-facebook-square {
+    transition: 0.25s; }
+    .fa-instagram:hover, .fa-facebook-square:hover {
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; } }
 
 /*# sourceMappingURL=styles.css.map */

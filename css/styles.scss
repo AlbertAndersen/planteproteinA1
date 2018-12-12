@@ -64,8 +64,19 @@ nav {
   padding: 0 70px;
 }
 
+nav .brand-logo {
+  right: 65%;
+}
+
 .brand-logo img {
-  height: 50px;
+  margin-top: 5px;
+  height: 45px;
+  transition: 0.25s;
+
+  &:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.25s;
+  }
 }
 
 /*
@@ -152,7 +163,7 @@ forside
 #boxTitle {
   height: 425px;
   padding-top: 175px;
-  background-image: url("../images/graphicPlaceholder2.png");
+  background-image: url("../images/graphic1.png");
   background-size: cover;
   background-position: center;
 
@@ -321,6 +332,7 @@ forside
 #categoryBox {
   display: flex;
   flex-flow: row wrap;
+  width: 100vw;
 
   img {
     width: 50vw;
@@ -372,9 +384,20 @@ forside
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
 
+  nav .brand-logo {
+    right: 80%;
+  }
+
+  .brand-logo {
+    img {
+      margin: 10px 0 0 0;
+    }
+  }
+
   #boxTitle {
     height: 512px;
     padding-top: 206px;
+    background-position: left;
 
     #Title{
       font-size: 48pt;
@@ -459,6 +482,10 @@ forside
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  nav .brand-logo {
+    right: 90%;
+  }
 
   #boxTitle {
     height: 100vh;
@@ -662,6 +689,15 @@ forside
 
   #Product{
     font-size: 48pt;
+  }
+
+  .fa-instagram, .fa-facebook-square {
+    transition: 0.25s;
+
+    &:hover {
+      transform: scale(1.1,1.1);
+      transition: 0.25s;
+    }
   }
 }
 
