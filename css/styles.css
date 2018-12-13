@@ -1,18 +1,20 @@
 /*Generelt*/
 body {
-
-
-
+  font-family: quatro, sans-serif;
+  font-style: normal;
   font-family: 'quatro', sans-serif;
   font-size: 14pt;
   overflow-x: hidden; }
-
 
 h1 {
   font-family: 'quatro-slab', serif;
   font-weight: 600;
   font-size: 24pt;
   text-align: center; }
+
+h1, h2, h3, h4, h5 {
+  font-family: 'quatro-slab', serif;
+  font-weight: 600; }
 
 /*
 Farver
@@ -36,22 +38,31 @@ nav {
 /*
 forside
 */
-
 .gridomdethele {
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto; }
 
 .hovedproduktbillede {
   background-color: #00a896;
-  max-height: 400px;
-  grid-column: 1/17; }
+  padding: 50px;
+  width: 100%;
+  grid-column: 1/17;
+  margin-top: 15%; }
 
-.knap {
-  background-color: #05668d;
+.knapover {
+  background-color: #02c39a;
   height: 50px;
   text-align: center;
   grid-column: 1/17;
-  margin-top: 5%; }
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center; }
+
+#btn1, #btn2, #btn3 {
+  background-color: #02c39a;
+  border: none;
+  color: #fff; }
 
 #text {
   display: none; }
@@ -66,38 +77,209 @@ forside
   background-color: #05668d;
   display: flex;
   padding: 5%;
-  justify-content: space-around; }
+  justify-content: space-around;
+  grid-column: 1/17; }
+  .smagogantal span {
+    font-size: 11pt;
+    padding: 10px 10px 0 10px; }
+  .smagogantal input[type=number] {
+    background-color: #e6f0f4;
+    border: none;
+    max-width: 50%;
+    border-radius: 5%;
+    padding: 0 0 0 5px; }
 
 .smag {
   grid-column: 1/9; }
+  .smag select {
+    font-size: 11pt; }
 
 .antal {
   grid-column: 9/17; }
-  .antal input {
-    color: #fff; }
+  .antal form {
+    font-size: 11pt; }
 
-.onecolumn {
+.fylde {
+  background-color: #02c39a;
+  height: 30px;
   grid-column: 1/17; }
+
+.knap {
+  grid-column: 1/17;
+  height: 55px;
+  font-family: 'quatro', sans-serif;
+  font-weight: 500;
+  font-size: 16pt;
+  color: #ffffff;
+  background-color: #05668d;
+  border: none;
+  width: 100%;
+  transition: 0.25s; }
+  .knap:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    transition: 0.25s; }
+
+.onecolumn, .onecolumnpris, .onecolumnprissmagogantal {
+  grid-column: 1/17; }
+
+.onecolumnpris {
+  margin: 5% 10%; }
 
 .checkboks {
-  grid-column: 1/17; }
+  grid-column: 1/17;
+  background-color: #02c39a;
+  width: 100%;
+  padding: 5% 0; }
   .checkboks .fa-check-circle {
     color: #05668d;
-    margin: 10px 10px 0 0; }
+    margin: 0 10%; }
 
 .andre {
-  background-color: #02c39a; }
+  background-color: #02c39a;
+  padding: 5% 10% 30% 10%;
+  color: #fff; }
 
 .underproduktbillede {
   background-color: #00a896;
-  max-height: 200px; }
+  padding: 50px;
+  width: 100%; }
 
-.et {
-  grid-column: 1/9; }
+.grid2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-column: 1/17; }
 
-.to {
-  grid-column: 9/17; }
+.tre {
+  display: none; }
 
+@media screen and (min-width: 992px) {
+  /*=======PRODUKTSIDE (CHRISTINA)========*/
+  .gridomdethele {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto; }
+
+  .hovedproduktbillede {
+    background-color: #00a896;
+    padding: 20%;
+    width: 100%;
+    grid-column: 1/9;
+    margin-top: 5%;
+    grid-row: 1/7; }
+
+  .onecolumnpris {
+    grid-column: 9/17;
+    grid-row: 1/7;
+    background-color: #02c39a;
+    margin: 0;
+    padding: 30% 0 0 30%;
+    color: #fff;
+    font-family: 'quatro', sans-serif; }
+
+  .onecolumnprissmagogantal {
+    grid-column: 9/17;
+    grid-row-start: 3; }
+
+  .smagogantal {
+    background-color: #02c39a;
+    display: block;
+    padding: 5% 0 5% 30%;
+    grid-column: 9/17;
+    grid-row-start: 3; }
+    .smagogantal span {
+      font-size: 18pt;
+      padding: 0;
+      color: #fff; }
+    .smagogantal input[type=number] {
+      background-color: #e6f0f4;
+      border: none;
+      max-width: 30%;
+      border-radius: 2%;
+      padding: 0 0 0 5px; }
+
+  .bundmargin {
+    margin: 0 0 7% 0; }
+    .bundmargin select {
+      max-width: 30%; }
+
+  .smag {
+    grid-column: 9/12; }
+    .smag select {
+      font-size: 11pt; }
+
+  .antal {
+    grid-column: 9/12; }
+
+  .fylde {
+    background-color: #02c39a;
+    height: 100%;
+    grid-column: 9/17;
+    grid-row: 4/5; }
+
+  .knap {
+    width: 175px;
+    height: 55px;
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none;
+    transition: 0.25s;
+    grid-column: 9/17;
+    grid-row: 4/5;
+    margin-left: 30%; }
+    .knap:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+
+  .checkboks {
+    grid-column: 9/17;
+    background-color: #02c39a;
+    width: 100%;
+    padding: 5% 0 5% 30%;
+    grid-row: 5/7;
+    color: #fff; }
+    .checkboks .fa-check-circle {
+      color: #05668d;
+      margin: 0 10% 0 0; }
+
+  .knapover {
+    background-color: #02c39a;
+    height: 50px;
+    text-align: justify;
+    grid-column: 1/17;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around; }
+
+  .andre {
+    background-color: #02c39a;
+    padding: 5%;
+    grid-row: 11/12; }
+
+  .web1 {
+    grid-row-start: 7; }
+
+  .grid2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column: 1/17; }
+
+  .et {
+    grid-column-start: 1; }
+
+  .to {
+    grid-column-start: 2; }
+
+  .tre {
+    display: block;
+    grid-column-start: 3; }
+
+  /*=======PRODUKTSIDE SLUT========*/ }
 #boxTitle {
   height: 425px;
   padding-top: 175px;
@@ -333,6 +515,5 @@ forside
     #topProtein:hover {
       transform: scale(1.1, 1.1);
       transition: 0.25s; } }
-
 
 /*# sourceMappingURL=styles.css.map */

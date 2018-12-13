@@ -74,51 +74,53 @@ Navigations bar
 
 <!---INDHOLD--->
 <div class="gridomdethele">
-    <h1>Indhold</h1>
 
-    <img src="images/testproduktbillede.png" class="hovedproduktbillede">
+    <img src="images/produktbilledetest.png" class="hovedproduktbillede">
 
-    <h4 class="onecolumn mobilmargin">Produktnavn</h4>
-    <p class="onecolumn mobilmargin">
-        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
-        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
-        gule ærter.
-    <span id="text">
-        Det er et langsomt fordøjeligt protein, der er ideelt til
-        brug efter en træning eller inden du går i seng for at fremme mager
-        muskelvækst og for at hjælpe muskelrestitution.
-    </span><br>
-    <button id="toggle">Read More</button>
-    </p>
 
-    <h5 class="onecolumn mobilmargin">299 kr.</h5>
 
-    <div class="smagogantal onecolumn">
-        <span>Vælg smag</span>
-        <form class="smag">
+    <h5 class="onecolumnpris">299 kr.</h5>
+
+    <div class="smagogantal onecolumnprissmagogantal">
+        <span class="smag">Vælg smag</span>
+        <form class="bundmargin">
             <select name="smag" style="display: block;">
                 <option value="chokolade">Chokolade</option>
                 <option value="vanilje" selected>Vanilje</option>
             </select>
         </form>
 
-        <span>Antal</span>
-        <form class="antal">
+        <span class="antal">Antal</span>
+        <form>
             <input type="number" name="antal" min="1" max="10" value="1">
         </form>
     </div>
+    <div class="fylde"></div>
+    <button class="knap">Læg i kurv</button>
 
-    <div class="knap"><a href="#">Læg i kurv</a></div>
-
-    <div class="checkboks mobilmargin">
+    <div class="checkboks">
         <i class="fas fa-check-circle"></i>Laktosefri <br>
         <i class="fas fa-check-circle"></i>Glutenfri<br>
         <i class="fas fa-check-circle"></i>Sojafri
     </div>
-    <div class="knap">
-        <a id="btn1">Ingredienser</a>
-        <a id="btn2"> Anvendelse</a>
-        <a id="btn3"> Anmeldelser</a>
+
+    <h2 class="onecolumn mobilmargin web1">Produktnavn</h2>
+    <p class="onecolumn mobilmargin">
+        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
+        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
+        gule ærter.
+        <span id="text">
+        Det er et langsomt fordøjeligt protein, der er ideelt til
+        brug efter en træning eller inden du går i seng for at fremme mager
+        muskelvækst og for at hjælpe muskelrestitution.
+    </span><br>
+        <button id="toggle">Read More</button>
+    </p>
+
+    <div class="knapover">
+        <button id="btn1" class="button">Ingredienser</button>
+        <button id="btn2" class="button"> Anvendelse</button>
+        <button id="btn3" class="button"> Anmeldelser</button>
     </div>
     <p class="onecolumn mobilmargin" id="test1">
         Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
@@ -132,10 +134,16 @@ Navigations bar
         <button id="toggle2">Read More</button>
     </p>
     <h3 class="onecolumn andre">Andre har også købt</h3>
-    <img src="images/testproduktbillede.png" class="underproduktbillede et">
-    <img src="images/testproduktbillede.png" class="underproduktbillede to">
-        <span class="et andre"><h5>Produktnavn <br> 199 kr.</h5></span>
-        <span class="to andre"><h5>Produktnavn <br> 199 kr.</h5></span>
+    <div class="grid2">
+    <img src="images/produktbilledetest.png" class="underproduktbillede et">
+    <img src="images/produktbilledetest.png" class="underproduktbillede to">
+    <img src="images/produktbilledetest.png" class="underproduktbillede tre">
+    </div>
+    <div class="onecolumn grid2">
+    <div class="et andre"><h5>Produktnavn <br><br> 199 kr.</h5></div>
+    <div class="to andre"><h5>Produktnavn <br><br> 199 kr.</h5></div>
+    <div class="tre andre"><h5>Produktnavn <br><br> 199 kr.</h5></div>
+    </div>
 </div>
 <!---INDHOLD--->
 
