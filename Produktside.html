@@ -35,6 +35,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://use.fontawesome.com/75970a48c3.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/gao5nrg.css">
 </head>
 
 <body>
@@ -105,11 +106,11 @@ Navigations bar
     </div>
 
     <h2 class="onecolumn mobilmargin web1">Produktnavn</h2>
-    <p class="onecolumn mobilmargin">
+    <p class="onecolumn mobilmargin web2">
         Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
         belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
         gule ærter.
-        <span id="text">
+        <span id="tekst">
         Det er et langsomt fordøjeligt protein, der er ideelt til
         brug efter en træning eller inden du går i seng for at fremme mager
         muskelvækst og for at hjælpe muskelrestitution.
@@ -118,15 +119,15 @@ Navigations bar
     </p>
 
     <div class="knapover">
-        <button id="btn1" class="button">Ingredienser</button>
-        <button id="btn2" class="button"> Anvendelse</button>
-        <button id="btn3" class="button"> Anmeldelser</button>
+        <button id="btn1" class="treknapper">Ingredienser</button>
+        <button id="btn2" class="treknapper"> Anvendelse</button>
+        <button id="btn3" class="treknapper"> Anmeldelser</button>
     </div>
     <p class="onecolumn mobilmargin" id="test1">
         Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
         belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
         gule ærter.
-        <span id="text2">
+        <span id="tekst2">
         Det er et langsomt fordøjeligt protein, der er ideelt til
         brug efter en træning eller inden du går i seng for at fremme mager
         muskelvækst og for at hjælpe muskelrestitution.
@@ -190,11 +191,11 @@ Navigations bar
             if (elem == "Read More") {
                 //Stuff to do when btn is in the read more state
                 $("#toggle").text("Read Less");
-                $("#text").slideDown();
+                $("#tekst").slideDown();
             } else {
                 //Stuff to do when btn is in the read less state
                 $("#toggle").text("Read More");
-                $("#text").slideUp();
+                $("#tekst").slideUp();
             }
         });
 
@@ -203,11 +204,11 @@ Navigations bar
             if (elem == "Read More") {
                 //Stuff to do when btn is in the read more state
                 $("#toggle2").text("Read Less");
-                $("#text2").slideDown();
+                $("#tekst2").slideDown();
             } else {
                 //Stuff to do when btn is in the read less state
                 $("#toggle2").text("Read More");
-                $("#text2").slideUp();
+                $("#tekst2").slideUp();
             }
         });
 

@@ -78,7 +78,7 @@ forside
 */
 
 
-//PRODUKTSIDE START (CHRISTINA)
+//PRODUKTSIDE MOBIL START (CHRISTINA)
 .gridomdethele{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -101,6 +101,10 @@ forside
   margin-top: 5%;
   display: flex;
   justify-content: center;
+  button{
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+  }
 }
 #btn1, #btn2, #btn3{
   background-color: $groen4;
@@ -109,10 +113,10 @@ forside
 }
 
 
-#text{
+#tekst{
   display:none;
 }
-#text2{
+#tekst2{
   display:none;
 }
 
@@ -198,12 +202,14 @@ forside
 
 .andre{
   background-color: #02c39a;
-  padding: 5% 10% 30% 10%;
+  padding: 5% 10% 5% 10%;
   //margin-bottom: 50px;
     color: #fff;
 }
 
-
+.mobilmargin{
+  margin:5% 5% 5% 15%;
+}
 .underproduktbillede{
   background-color: #00a896;
   padding: 50px;
@@ -218,19 +224,14 @@ forside
 .tre{
   display: none;
 }
-//PRODUKTSIDE SLUT
+//PRODUKTSIDE Mobil SLUT
 
 
 // Variabler - med størrelser
 
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
-}
-
-@media screen and (min-width: 992px) {
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-
-/*=======PRODUKTSIDE (CHRISTINA)========*/
+  /*=======PRODUKTSIDE (CHRISTINA)========*/
   .gridomdethele{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -243,7 +244,7 @@ forside
     padding: 20%;
     width: 100%;
     grid-column: 1/9;
-    margin-top: 5%;
+    margin-top: 10%;
     grid-row: 1/7;
   }
 
@@ -254,7 +255,8 @@ forside
     margin: 0;
     padding: 30% 0 0 30%;
     color: #fff;
-    font-family: 'quatro', sans-serif;
+    /*font-family: 'quatro', sans-serif;
+    font-weight: 500;*/
   }
 
   .onecolumnprissmagogantal{
@@ -310,7 +312,7 @@ forside
 
 
   .knap{
-   @include button;
+    @include button;
     grid-column: 9/17;
     grid-row: 4/5;
     margin-left: 30%;
@@ -338,17 +340,26 @@ forside
     margin-top: 5%;
     display: flex;
     justify-content: space-around;
+    button:hover {//skal de kunne det?
+      cursor: pointer;
+      transform: scale(1.1,1.1);
+      transition: 0.25s;
+    }
   }
 
   .andre{
     background-color: #02c39a;
-    padding: 5%;
     grid-row: 11/12;
+    padding: 5% 10% 5% 15%;
     //margin-bottom: 50px;
   }
 
   .web1{
     grid-row-start: 7;
+  }
+  .web2{
+    grid-row-start: 8;
+    margin-top: -20px;
   }
   .grid2{
     display: grid;
@@ -366,6 +377,39 @@ forside
     grid-column-start: 3;
   }
   /*=======PRODUKTSIDE SLUT========*/
+}
+
+
+@media screen and (min-width: 992px) {
+  // Alt der ændres i tablet liggende fra mobil og tablet stående
+  .hovedproduktbillede{
+    background-color: $groen3;
+    padding: 20%;
+    width: 100%;
+    grid-column: 1/9;
+    margin-top: 5%;
+    grid-row: 1/7;
+  }
+
+  .onecolumnpris{
+    grid-column: 9/17;
+    grid-row: 1/7;
+    background-color: $groen4;
+    margin: 0;
+    padding: 30% 0 0 30%;
+    color: #fff;
+    /*font-family: 'quatro', sans-serif;
+    font-weight: 500;*/
+  }
+
+  .web2{
+    grid-row-start: 8;
+    margin-top: -40px;
+  }
+
+  /*.smagogantal{
+    margin: 100px 0 0 0 ;
+  }*/
 }
 
 @media screen and (min-width: 1200px) {
