@@ -100,7 +100,6 @@ forside
   padding: 5vw; }
 
 .andreBlog {
-  list-style-type: circle;
   padding: 5vw;
   background-color: #05668d;
   color: white; }
@@ -124,6 +123,13 @@ forside
     text-align: center;
     margin: 0;
     font-weight: 600; }
+
+.fejl {
+  background-color: #028090;
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  height: 60vh; }
 
 #boxTitle {
   height: 375px;
