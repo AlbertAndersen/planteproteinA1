@@ -103,6 +103,38 @@ forside
 .to {
   grid-column: 9/17; }
 
+.blogQuote {
+  font-size: 24px; }
+
+.blogPost {
+  padding: 5vw; }
+
+.andreBlog {
+  list-style-type: circle;
+  padding: 5vw;
+  background-color: #05668d;
+  color: white; }
+  .andreBlog a {
+    color: white; }
+
+#boxTitle2 {
+  height: 375px;
+  padding-top: 125px;
+  background-image: url("../images/graphicPlaceholder2.png");
+  background-size: cover;
+  background-position: center; }
+  #boxTitle2 #Title2 {
+    margin: 0;
+    color: #05668d;
+    text-align: center;
+    font-weight: 600; }
+  #boxTitle2 #subTitle2 {
+    font-size: 16pt;
+    color: #05668d;
+    text-align: center;
+    margin: 0;
+    font-weight: 600; }
+
 #boxTitle {
   height: 425px;
   padding-top: 175px;
@@ -391,6 +423,7 @@ forside
     #newsletter h1 {
       margin: 0 0 40px 0; }
 
+
   #productPage #productText p {
     margin: 5vw 25vw;
     text-align: start; }
@@ -407,6 +440,13 @@ forside
   #notFound {
     height: 500px;
     padding: 200px 250px 150px; } }
+
+  .blogPost {
+    padding: 5vw 15vw; }
+
+  .andreBlog {
+    padding: 5vw 15vw; } }
+
 @media screen and (min-width: 1200px) {
   nav .brand-logo {
     right: 90%; }
@@ -492,6 +532,7 @@ forside
       transform: scale(1.1, 1.1);
       transition: 0.25s; }
 
+
   #productPage #productText p {
     margin: 3vw 25vw;
     text-align: start; }
@@ -568,4 +609,3 @@ forside
       transform: scale(1.1, 1.1);
       transition: 0.25s; } }
 
-/*# sourceMappingURL=styles.css.map */
