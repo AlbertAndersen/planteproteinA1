@@ -22,13 +22,22 @@ navigation
 */
 nav {
   background-color: #05668d;
-  position: fixed; }
+  position: fixed;
+  z-index: 1; }
 
 .nav-wrapper {
   padding: 0 70px; }
 
+nav .brand-logo {
+  right: 65%; }
+
 .brand-logo img {
-  height: 50px; }
+  margin-top: 5px;
+  height: 45px;
+  transition: 0.25s; }
+  .brand-logo img:hover {
+    transform: scale(1.1, 1.1);
+    transition: 0.25s; }
 
 /*
 forside
@@ -129,7 +138,7 @@ forside
 #boxTitle {
   height: 425px;
   padding-top: 175px;
-  background-image: url("../images/graphicPlaceholder2.png");
+  background-image: url("../images/graphic1.png");
   background-size: cover;
   background-position: center; }
   #boxTitle #Title {
@@ -182,7 +191,8 @@ forside
   height: 125px;
   text-align: center;
   padding: 35px 0;
-  background-color: #02c39a; }
+  background-color: #02c39a;
+  color: #ffffff; }
   .proteinCategory button {
     width: 175px;
     height: 55px;
@@ -264,17 +274,125 @@ forside
     .page-footer #SoMe a {
       color: #ffffff; }
 
+#boxProduct {
+  height: 425px;
+  padding-top: 200px;
+  background-image: url("../images/graphic3.png");
+  background-size: cover;
+  background-position: -380px 0; }
+  #boxProduct #Product {
+    margin: 0;
+    color: #05668d;
+    text-align: center;
+    font-weight: 600; }
+
+#productPage {
+  height: 375px;
+  background-color: #02c39a;
+  text-align: center;
+  color: #ffffff;
+  padding: 40px; }
+  #productPage h1 {
+    margin: 0; }
+  #productPage button {
+    width: 175px;
+    height: 55px;
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none;
+    transition: 0.25s; }
+    #productPage button:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+  #productPage #productText p {
+    text-align: start; }
+
+#categoryBox {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw; }
+  #categoryBox img {
+    width: 50vw;
+    height: auto; }
+  #categoryBox .proteinCategory {
+    width: 50vw;
+    height: 125px; }
+    #categoryBox .proteinCategory p {
+      margin: 0; }
+
+.categoryButton {
+  background-color: #02c39a; }
+  .categoryButton button {
+    width: 175px;
+    height: 55px;
+    font-family: 'quatro', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    color: #ffffff;
+    background-color: #05668d;
+    border: none;
+    transition: 0.25s;
+    width: 100%; }
+    .categoryButton button:hover {
+      cursor: pointer;
+      transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+
+#productFilter {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: #05668d;
+  color: #ffffff; }
+  #productFilter p {
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    width: 50%; }
+  #productFilter select {
+    background-color: #ffffff;
+    color: #05668d;
+    height: 40px;
+    width: 50%; }
+
+#notFound {
+  height: 375px;
+  background-color: #02c39a;
+  color: #ffffff;
+  padding: 125px 5vw;
+  text-align: center; }
+  #notFound a {
+    text-decoration: underline;
+    color: #ffffff; }
+  #notFound h1 {
+    margin-top: 0; }
+
 @media screen and (min-width: 768px) {
+  nav .brand-logo {
+    right: 80%; }
+
+  .brand-logo img {
+    margin: 10px 0 0 0; }
+
   #boxTitle {
     height: 512px;
-    padding-top: 206px; }
+    padding-top: 206px;
+    background-position: left; }
     #boxTitle #Title {
       font-size: 48pt; }
     #boxTitle #subTitle {
       font-size: 24pt; }
 
   #weRecommend {
-    padding: 0; }
+    padding: 0;
+    background-image: url("../images/graphic2.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
     #weRecommend h1 {
       padding: 2.5vh 0; }
     #weRecommend #weRecommendBox {
@@ -282,14 +400,15 @@ forside
       #weRecommend #weRecommendBox #graphicPlaceholder {
         display: block;
         width: 375px;
-        height: 375px;
-        background-image: url("../images/graphicPlaceholder.png");
-        background-repeat: no-repeat;
-        background-size: contain; }
+        height: 375px; }
       #weRecommend #weRecommendBox #recommendText {
         width: 375px;
         height: 375px;
         padding: 0 5vw 5vw 5vw; }
+
+  #proteinBlog {
+    background-image: url("../images/graphic4.png");
+    background-size: cover; }
 
   #productBox {
     display: flex; }
@@ -304,12 +423,34 @@ forside
     #newsletter h1 {
       margin: 0 0 40px 0; }
 
+
+  #productPage #productText p {
+    margin: 5vw 25vw;
+    text-align: start; }
+
+  #categoryBox .proteinCategory {
+    width: 50vw;
+    height: 125px; }
+    #categoryBox .proteinCategory p {
+      margin-top: 15px; }
+
+  #boxProduct {
+    background-position: center; }
+
+  #notFound {
+    height: 500px;
+    padding: 200px 250px 150px; } }
+
   .blogPost {
     padding: 5vw 15vw; }
 
   .andreBlog {
     padding: 5vw 15vw; } }
+
 @media screen and (min-width: 1200px) {
+  nav .brand-logo {
+    right: 90%; }
+
   #boxTitle {
     height: 100vh;
     padding-top: 40vh; }
@@ -335,11 +476,26 @@ forside
 
   #productBox {
     display: flex; }
+    #productBox .hoverBox {
+      position: relative; }
+    #productBox .hoverBox:hover .proteinCategory {
+      opacity: 1; }
     #productBox .productPlaceholder {
-      width: 33vw;
-      height: auto; }
+      height: auto;
+      display: block;
+      width: 100%; }
     #productBox .proteinCategory {
-      width: 33vw; }
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease; }
+      #productBox .proteinCategory button {
+        margin: 25vh 0; }
     #productBox #productSupplements {
       display: block; }
 
@@ -352,7 +508,15 @@ forside
   #proteinBlog button {
     margin: 0 40%; }
 
+  #newsletter {
+    height: auto;
+    display: flex;
+    padding-left: 27.5vw; }
+    #newsletter h1 {
+      margin-top: 40px; }
+
   #topProtein {
+    display: none;
     color: #ffffff;
     cursor: pointer;
     position: fixed;
@@ -366,6 +530,82 @@ forside
     text-align: center; }
     #topProtein:hover {
       transform: scale(1.1, 1.1);
+      transition: 0.25s; }
+
+
+  #productPage #productText p {
+    margin: 3vw 25vw;
+    text-align: start; }
+
+  #productFilter {
+    display: flex;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+    background-color: #05668d;
+    color: #ffffff;
+    padding: 45px 75px; }
+    #productFilter p {
+      padding-right: 25px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      width: auto; }
+    #productFilter select {
+      background-color: #ffffff;
+      color: #05668d;
+      height: 40px;
+      width: 175px; }
+
+  #categoryBox {
+    width: 100vw; }
+    #categoryBox img {
+      width: 25vw; }
+    #categoryBox .hoverBox {
+      position: relative; }
+    #categoryBox .categoryButton {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease; }
+      #categoryBox .categoryButton button {
+        margin: 25vh 100px;
+        width: 175px;
+        height: 55px;
+        font-family: 'quatro', sans-serif;
+        font-weight: 500;
+        font-size: 16pt;
+        color: #ffffff;
+        background-color: #05668d;
+        border: none;
+        transition: 0.25s; }
+        #categoryBox .categoryButton button:hover {
+          cursor: pointer;
+          transform: scale(1.1, 1.1);
+          transition: 0.25s; }
+    #categoryBox .hoverBox:hover .categoryButton {
+      opacity: 1; }
+    #categoryBox .proteinCategory {
+      width: 25vw;
+      height: 125px; }
+      #categoryBox .proteinCategory p {
+        margin-top: 15px; }
+
+  #Product {
+    font-size: 48pt; }
+
+  #boxProduct {
+    background-position: initial; }
+
+  .fa-instagram, .fa-facebook-square {
+    transition: 0.25s; }
+    .fa-instagram:hover, .fa-facebook-square:hover {
+      transform: scale(1.1, 1.1);
       transition: 0.25s; } }
 
-/*# sourceMappingURL=styles.css.map */

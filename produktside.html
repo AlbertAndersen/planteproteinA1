@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- Fortæller det er html5 -->
+<!-- html starter og slutter hele dokumentet / lang=da: Fortæller siden er på dansk -->
+<html lang="da">
+
+<!-- I <head> har man opsætning - alt det som man ikke ser som selve indholdet -->
+<head>
+
+    <!-- Sætter tegnsætning til utf-8 som bl.a. tillader danske bogstaver -->
+    <meta charset="utf-8">
+    <title>Plante Protein | </title>
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+    <meta name="description" content="Plante Protein er Danmarks eneste veganske proteinshop.">
+    <meta property="og:type" content="WebSite"/>
+    <meta property="og:description" content="Plante Protein er Danmarks eneste veganske proteinshop. Vi sælger vegansk proteinpulver, barer og kosttilskud.">
+    <meta property="og:locale" content="da_DK">
+    <!-- Titel som ses oppe i browserens tab mv. -->
+    <title>Plante Protein</title>
+
+    <!-- Metatags der fortæller at søgemaskiner er velkomne, hvem der udgiver siden og copyright information -->
+    <meta name="robots" content="All">
+    <meta name="author" content="Udgiver">
+    <meta name="copyright" content="Information om copyright">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--CSS-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/styles.css"  media="screen,projection"/>
+
+    <script src="https://use.fontawesome.com/d7da0e08ee.js"></script>
+
+    <!--Jquery, script og andet-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://use.fontawesome.com/75970a48c3.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+
+<!--
+Navigations bar
+-->
+
+<nav>
+    <div class="nav-wrapper ">
+        <a href="#!" class="brand-logo"><img class="responsive-img" src="images/logo.png"> </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li><a href="#">Lister</a></li>
+            <li><a href="undersider/blog.html">Blog</a></li>
+            <li><a href="#">Anmeldelser</a></li>
+            <li><a href="#">Podcast</a></li>
+
+            <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i> </a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x"></i> </a></li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav" id="mobile-demo">
+    <li><a href="#">lister</a></li>
+    <li><a href="undersider/blog.html">Blog</a></li>
+    <li><a href="#">Anmeldelser</a></li>
+    <li><a href="#">Podcast</a></li>
+    <li><a href="#"><i class="fab fa-facebook-square fa-2x"></i> </a></li>
+    <li><a href="#"><i class="fab fa-instagram fa-2x"></i> </a></li>
+</ul>
+
+<!--
+Navigations bar
+-->
+
+<!---INDHOLD--->
+<div class="gridomdethele">
+    <h1>Indhold</h1>
+
+    <img src="images/testproduktbillede.png" class="hovedproduktbillede">
+
+    <h4 class="onecolumn mobilmargin">Produktnavn</h4>
+    <p class="onecolumn mobilmargin">
+        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
+        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
+        gule ærter.
+    <span id="text">
+        Det er et langsomt fordøjeligt protein, der er ideelt til
+        brug efter en træning eller inden du går i seng for at fremme mager
+        muskelvækst og for at hjælpe muskelrestitution.
+    </span><br>
+    <button id="toggle">Read More</button>
+    </p>
+
+    <h5 class="onecolumn mobilmargin">299 kr.</h5>
+
+    <div class="smagogantal onecolumn">
+        <span>Vælg smag</span>
+        <form class="smag">
+            <select name="smag" style="display: block;">
+                <option value="chokolade">Chokolade</option>
+                <option value="vanilje" selected>Vanilje</option>
+            </select>
+        </form>
+
+        <span>Antal</span>
+        <form class="antal">
+            <input type="number" name="antal" min="1" max="10" value="1">
+        </form>
+    </div>
+
+    <div class="knap"><a href="#">Læg i kurv</a></div>
+
+    <div class="checkboks mobilmargin">
+        <i class="fas fa-check-circle"></i>Laktosefri <br>
+        <i class="fas fa-check-circle"></i>Glutenfri<br>
+        <i class="fas fa-check-circle"></i>Sojafri
+    </div>
+    <div class="knap">
+        <a id="btn1">Ingredienser</a>
+        <a id="btn2"> Anvendelse</a>
+        <a id="btn3"> Anmeldelser</a>
+    </div>
+    <p class="onecolumn mobilmargin" id="test1">
+        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
+        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
+        gule ærter.
+        <span id="text2">
+        Det er et langsomt fordøjeligt protein, der er ideelt til
+        brug efter en træning eller inden du går i seng for at fremme mager
+        muskelvækst og for at hjælpe muskelrestitution.
+    </span><br>
+        <button id="toggle2">Read More</button>
+    </p>
+    <h3 class="onecolumn andre">Andre har også købt</h3>
+    <img src="images/testproduktbillede.png" class="underproduktbillede et">
+    <img src="images/testproduktbillede.png" class="underproduktbillede to">
+        <span class="et andre"><h5>Produktnavn <br> 199 kr.</h5></span>
+        <span class="to andre"><h5>Produktnavn <br> 199 kr.</h5></span>
+</div>
+<!---INDHOLD--->
+
+
+<!--Footer-->
+
+<footer class="page-footer ">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Animations lounge</h5>
+                <p class="grey-text text-lighten-4">Animations lounge er er et fælleskab for danske animationsfilm elskere<br>Alle filmbilleder er tager fra themoviedb.org</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Blog indlæg</h5>
+                <ul>
+                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Stærke kvindelige hovedpersoner</a></li>
+                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Hvordan animationsfilm afspejler samfundsmæssige problemstillinger</a></li>
+                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Nostalgi tema: hvilken film ændrede DIT liv</a></li>
+                    <li style="padding-bottom: 4px"><a class="grey-text text-lighten-3" href="#!">Japansk kultur</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            Animation lounge © 2018
+            <a class="grey-text text-lighten-4 right" href="#!" style="padding: 0px 10px"><i class="fab fa-instagram fa-2x"></i></a>
+            <a class="grey-text text-lighten-4 right" href="#!"><i class="fab fa-facebook-square fa-2x"></i></a>
+        </div>
+    </div>
+</footer>
+
+<!--Alle scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+
+    $(document).ready(function () { //kører først når dokumentet er klar
+
+        $('.sidenav').sidenav(); //fortæller at materilize at vi bruger deres navbar
+
+        $("#toggle").click(function() {
+            var elem = $("#toggle").text();
+            if (elem == "Read More") {
+                //Stuff to do when btn is in the read more state
+                $("#toggle").text("Read Less");
+                $("#text").slideDown();
+            } else {
+                //Stuff to do when btn is in the read less state
+                $("#toggle").text("Read More");
+                $("#text").slideUp();
+            }
+        });
+
+        $("#toggle2").click(function() {
+            var elem = $("#toggle2").text();
+            if (elem == "Read More") {
+                //Stuff to do when btn is in the read more state
+                $("#toggle2").text("Read Less");
+                $("#text2").slideDown();
+            } else {
+                //Stuff to do when btn is in the read less state
+                $("#toggle2").text("Read More");
+                $("#text2").slideUp();
+            }
+        });
+
+        $("#btn1").click(function(){
+            $("#test1").text("Hello world!");
+        });
+        $("#btn2").click(function(){
+            $("#test1").text("ghurwhgiorhoi");
+        });
+        $("#btn3").click(function(){
+            $("#test1").text("BLAG!");
+        });
+
+
+    });
+
+</script>
+
+<!--loader materilize-->
+<script type="text/javascript" src="js/materialize.js"> </script>
+
+
+</body>
+</html>
