@@ -4277,6 +4277,9 @@ table span.badge {
   }
 }
 
+
+
+
 nav {
   color: #fff;
   background-color: #ee6e73;
@@ -4352,7 +4355,7 @@ nav .brand-logo.center {
 
 @media only screen and (max-width: 992px) {
   nav .brand-logo {
-    right: 60%;
+    right: 80%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }

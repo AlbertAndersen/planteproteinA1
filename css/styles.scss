@@ -4,8 +4,8 @@ body {
 
 
 
-  font-style: normal;
 
+  font-style: normal;
   font-family: 'quatro', sans-serif;
   font-size: 14pt;
   overflow-x: hidden;
@@ -60,20 +60,33 @@ navigation
 
 nav {
   background-color: $moerkegroen;
+  position: fixed;
+  z-index: 1;
 }
 
 .nav-wrapper {
   padding: 0 70px;
 }
 
-.brand-logo img {
-  height: 50px;
+nav .brand-logo {
+  right: 65%;
 }
+
+.brand-logo img {
+  margin-top: 5px;
+  height: 45px;
+  transition: 0.25s;
+
+  &:hover {
+    transform: scale(1.1,1.1);
+    transition: 0.25s;
+  }
+}
+
 
 /*
 forside
 */
-
 
 //PRODUKTSIDE START
 .gridomdethele{
@@ -219,28 +232,10 @@ forside
 
 //PRODUKTSIDE SLUT
 
-// Variabler - med størrelser
-
-@media screen and (min-width: 768px) {
-  // Alt der ændres i tablet stående fra mobil
-}
-
-@media screen and (min-width: 992px) {
-  // Alt der ændres i tablet liggende fra mobil og tablet stående
-
-}
-
-@media screen and (min-width: 1200px) {
-  // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
-}
-@media print {
-  // Alt der gælder for print specifikt
-}
-
 #boxTitle {
-  height: 375px;
-  padding-top: 125px;
-  background-image: url("../images/graphicPlaceholder2.png");
+  height: 425px;
+  padding-top: 175px;
+  background-image: url("../images/graphic1.png");
   background-size: cover;
   background-position: center;
 
@@ -279,6 +274,10 @@ forside
   button {
     @include button;
   }
+
+  #recommendText p {
+    text-align: start;
+  }
 }
 
 .productPlaceholder {
@@ -292,6 +291,7 @@ forside
   text-align: center;
   padding: 35px 0;
   background-color: $groen4;
+  color: $hvid;
 
   button {
     @include button;
@@ -366,14 +366,131 @@ forside
   }
 }
 
+#boxProduct {
+  height: 425px;
+  padding-top: 200px;
+  background-image: url("../images/graphic3.png");
+  background-size: cover;
+  background-position: -380px 0;
+
+  #Product{
+    margin: 0;
+    color: $moerkegroen;
+    text-align: center;
+    font-weight: 600;
+  }
+}
+
+#productPage {
+  height: 375px;
+  background-color: $groen4;
+  text-align: center;
+  color: $hvid;
+  padding: 40px;
+
+  h1 {
+    margin: 0;
+  }
+
+  button {
+    @include button;
+  }
+
+  #productText p {
+    text-align: start;
+  }
+}
+
+#categoryBox {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100vw;
+
+  img {
+    width: 50vw;
+    height: auto;
+  }
+
+  .proteinCategory {
+    width: 50vw;
+    height: 125px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.categoryButton {
+  background-color: $groen4;
+
+  button {
+    @include button;
+    width: 100%;
+  }
+}
+
+#productFilter {
+  display: flex;
+  height: 40px;
+  width: 100%;
+  background-color: $moerkegroen;
+  color: $hvid;
+
+  p {
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0;
+    width: 50%;
+  }
+
+  select {
+    background-color: $hvid;
+    color: $moerkegroen;
+    height: 40px;
+    width: 50%;
+  }
+}
+
+
+#notFound {
+  height: 375px;
+  background-color: $groen4;
+  color: $hvid;
+  padding: 125px 5vw;
+  text-align: center;
+
+  a {
+    text-decoration: underline;
+    color: $hvid;
+  }
+
+  h1 {
+    margin-top: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
   // Alt der ændres i tablet stående fra mobil
 
 
+  nav .brand-logo {
+    right: 80%;
+  }
+
+  .brand-logo {
+    img {
+      margin: 10px 0 0 0;
+    }
+  }
+
+
 
   #boxTitle {
-    height: 94vh;
-    padding-top: 33vh;
+    height: 512px;
+    padding-top: 206px;
+    background-position: left;
 
     #Title{
       font-size: 48pt;
@@ -386,6 +503,9 @@ forside
 
   #weRecommend {
     padding: 0;
+    background-image: url("../images/graphic2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
 
     h1{
       padding: 2.5vh 0;
@@ -398,9 +518,6 @@ forside
         display: block;
         width: 375px;
         height: 375px;
-        background-image: url("../images/graphicPlaceholder.png");
-        background-repeat: no-repeat;
-        background-size: contain;
       }
 
       #recommendText {
@@ -409,6 +526,11 @@ forside
         padding: 0 5vw 5vw 5vw;
       }
     }
+  }
+
+  #proteinBlog {
+    background-image: url("../images/graphic4.png");
+    background-size: cover;
   }
 
   #productBox {
@@ -432,6 +554,35 @@ forside
     }
   }
 
+  #productPage {
+
+    #productText p {
+      margin: 5vw 25vw;
+      text-align: start;
+    }
+  }
+
+  #categoryBox {
+    .proteinCategory {
+      width: 50vw;
+      height: 125px;
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  #boxProduct {
+    background-position: center;
+  }
+
+  #notFound {
+    height: 500px;
+    padding: 200px 250px 150px;
+
+  }
+
   //blog
 
   .blogPost{
@@ -446,6 +597,7 @@ forside
     padding: 5vw 15vw;
   }
 
+
 }
 
 @media screen and (min-width: 992px) {
@@ -454,6 +606,23 @@ forside
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  nav .brand-logo {
+    right: 90%;
+  }
+
+  #boxTitle {
+    height: 100vh;
+    padding-top: 40vh;
+
+    #Title{
+      font-size: 48pt;
+    }
+
+    #subTitle {
+      font-size: 24pt;
+    }
+  }
 
   #weRecommend {
     height: 640px;
@@ -482,13 +651,34 @@ forside
   #productBox {
     display: flex;
 
+    .hoverBox {
+      position: relative;
+    }
+
+    .hoverBox:hover .proteinCategory {
+      opacity: 1;
+    }
+
     .productPlaceholder {
-      width: 33vw;
       height: auto;
+      display: block;
+      width: 100%;
     }
 
     .proteinCategory {
-      width: 33vw;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease;
+
+      button {
+        margin: 25vh 0;
+      }
     }
 
     #productSupplements {
@@ -515,7 +705,18 @@ forside
     }
   }
 
+  #newsletter {
+    height: auto;
+    display: flex;
+    padding-left: 27.5vw;
+
+    h1 {
+      margin-top: 40px;
+    }
+  }
+
   #topProtein {
+    display: none;
     color: $hvid;
     cursor: pointer;
     position: fixed;
@@ -527,6 +728,99 @@ forside
     height: 40px;
     transition: 0.25s;
     text-align: center;
+
+    &:hover {
+      transform: scale(1.1,1.1);
+      transition: 0.25s;
+    }
+  }
+
+  #productPage {
+
+    #productText p {
+      margin: 3vw 25vw;
+      text-align: start;
+    }
+  }
+
+  #productFilter {
+    display: flex;
+    justify-content: center;
+    height: 125px;
+    width: 100%;
+    background-color: $moerkegroen;
+    color: $hvid;
+    padding: 45px 75px;
+
+    p {
+      padding-right: 25px;
+      height: 40px;
+      line-height: 40px;
+      margin: 0;
+      width: auto;
+    }
+
+    select {
+      background-color: $hvid;
+      color: $moerkegroen;
+      height: 40px;
+      width: 175px;
+    }
+  }
+
+  #categoryBox {
+    width: 100vw;
+
+    img {
+      width: 25vw;
+    }
+
+    .hoverBox {
+      position: relative;
+    }
+
+    .categoryButton {
+      background-color: transparent;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .25s ease;
+
+      button {
+        margin: 25vh 100px;
+        @include button;
+      }
+    }
+
+    .hoverBox:hover .categoryButton{
+      opacity: 1;
+    }
+
+    .proteinCategory {
+      width: 25vw;
+      height: 125px;
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  #Product{
+    font-size: 48pt;
+  }
+
+  #boxProduct {
+    background-position: initial;
+  }
+
+  .fa-instagram, .fa-facebook-square {
+    transition: 0.25s;
 
     &:hover {
       transform: scale(1.1,1.1);

@@ -1,0 +1,2 @@
+ErrorDocument 403 /ddp_403.html
+ErrorDocument 404 /ddp_404.html
