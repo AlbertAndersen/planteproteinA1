@@ -106,7 +106,7 @@ forside
     font-weight: 500;
   }
 }
-#btn1, #btn2, #btn3{
+#btn1ch, #btn2ch, #btn3ch{
   background-color: $groen4;
   border: none;
   color: #fff;
@@ -116,8 +116,18 @@ forside
 #tekst{
   display:none;
 }
-#tekst2{
-  display:none;
+
+#skift{
+  font-family: 'quatro', sans-serif;
+  font-weight: 500;
+  font-size: 16pt;
+  color: $moerkegroen;
+  border: none;
+  background-color: #fff;
+  &:hover{
+    cursor: pointer;
+    color: $groen2;
+  }
 }
 
 .mobilmargin{
@@ -194,6 +204,7 @@ forside
   background-color: $groen4;
   width: 100%;
   padding: 5% 0;
+  color: #fff;
   .fa-check-circle{
     color: #05668d;
     margin: 0 10%;
@@ -241,7 +252,7 @@ forside
 
   .hovedproduktbillede{
     background-color: $groen3;
-    padding: 20%;
+    padding: 45% 20% 20% 20%;
     width: 100%;
     grid-column: 1/9;
     margin-top: 10%;
@@ -250,7 +261,7 @@ forside
 
   .onecolumnpris{
     grid-column: 9/17;
-    grid-row: 1/7;
+    grid-row-start: 1;
     background-color: $groen4;
     margin: 0;
     padding: 30% 0 0 30%;
@@ -261,7 +272,7 @@ forside
 
   .onecolumnprissmagogantal{
     grid-column: 9/17;
-    grid-row-start: 3;
+    grid-row-start: 2;
   }
 
   .smagogantal{
@@ -271,7 +282,7 @@ forside
     //justify-content: space-around;
     //flex-direction: column;
     grid-column: 9/17;
-    grid-row-start: 3;
+    grid-row-start: 2;
     span{
       font-size: 18pt;
       padding: 0;
@@ -307,14 +318,14 @@ forside
     background-color: $groen4;
     height: 100%;
     grid-column: 9/17;
-    grid-row: 4/5;
+    grid-row: 3/5;
   }
 
 
   .knap{
     @include button;
     grid-column: 9/17;
-    grid-row: 4/5;
+    grid-row: 3/5;
     margin-left: 30%;
   }
 
@@ -382,9 +393,11 @@ forside
 
 @media screen and (min-width: 992px) {
   // Alt der ændres i tablet liggende fra mobil og tablet stående
+
+  //PRODUKTSIDE START CHRISTINA 992
   .hovedproduktbillede{
     background-color: $groen3;
-    padding: 20%;
+    padding: 30% 20% 20% 20%;
     width: 100%;
     grid-column: 1/9;
     margin-top: 5%;
@@ -393,7 +406,7 @@ forside
 
   .onecolumnpris{
     grid-column: 9/17;
-    grid-row: 1/7;
+    grid-row-start: 1;
     background-color: $groen4;
     margin: 0;
     padding: 30% 0 0 30%;
@@ -410,10 +423,74 @@ forside
   /*.smagogantal{
     margin: 100px 0 0 0 ;
   }*/
+  //PRODUKTSIDE SLUT CHRISTINA 992
 }
 
 @media screen and (min-width: 1200px) {
   // Alt der ændres i computer fra mobil, tablet stående og tablet liggende
+
+  //PRODUKTSIDE START CHRISTINA 1200
+  .onecolumnpris {
+    grid-column: 9/17;
+    grid-row: 1/7;
+    background-color: $groen4;
+    margin: 0;
+    padding: 30% 0 0 30%;
+    color: #fff;
+    /*font-family: 'quatro', sans-serif;
+    font-weight: 500;*/
+  }
+
+  .onecolumnprissmagogantal{
+    grid-column: 9/17;
+    grid-row-start: 2;
+  }
+
+  .smagogantal{
+    background-color: $groen4;
+    display: block;
+    padding: 5% 0 5% 30%;
+    //justify-content: space-around;
+    //flex-direction: column;
+    grid-column: 9/17;
+    grid-row-start: 2;
+    span{
+      font-size: 18pt;
+      padding: 0;
+      color: #fff;
+    }
+  }
+
+
+  .fylde{
+    background-color: $groen4;
+    height: 100%;
+    grid-column: 9/17;
+    grid-row: 3/5;
+    padding-bottom: 0;
+  }
+
+
+  .knap{
+    @include button;
+    grid-column: 9/17;
+    grid-row: 3/5;
+    margin-left: 30%;
+  }
+
+  .checkboks{
+    grid-column: 9/17;
+    background-color: $groen4;
+    width: 100%;
+    padding: 5% 0 30% 30%;
+    grid-row: 5/7;
+    color: #fff;
+    .fa-check-circle{
+      color: #05668d;
+      margin: 0 10% 0 0;
+    }
+  }
+  //PRODUKTSIDE SLUT CHRISTINA 1200
 }
 @media print {
   // Alt der gælder for print specifikt

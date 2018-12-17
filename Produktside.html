@@ -107,32 +107,43 @@ Navigations bar
 
     <h2 class="onecolumn mobilmargin web1">Produktnavn</h2>
     <p class="onecolumn mobilmargin web2">
-        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
-        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
-        gule ærter.
+        Plantforce Synergy protein har en optimal blanding af risprotein, ærteprotein og
+        hampeprotein. Den smager godt og har 100% naturlig smag med silkeblød konsistens.
+        Den er raw og naturligvis vegansk. Det er et kvalitets proteinpulver, der er utrolig
+        let at ryste op, og gir’ en god konsistens både i smoothies og i shakes.
         <span id="tekst">
-        Det er et langsomt fordøjeligt protein, der er ideelt til
-        brug efter en træning eller inden du går i seng for at fremme mager
-        muskelvækst og for at hjælpe muskelrestitution.
+        <br>Varianterne vanilje og chokolade er fremstillet med 100% naturlig smag, og er
+        sødet naturligt med stevia. Vælg mellem naturel, vanilje og chokolade.
+        Alle produkterne er fri for alle allergener såsom mælk, soja, hvede og gluten
+        og tolereres af følsomme individer på grund af sin allergivenlige natur.
+        <br><br>
+        Plant Force Synergy har en balanceret aminosyreprofil. Den er rig på BCAA
+        (forgrenede aminosyrer: leucin, isoleucin og valin). Plantforce Synergy Protein
+        er en perfekt synergi af lav-allergene og komplementære RAW plantebaserede proteiner.
     </span><br>
-        <button id="toggle">Read More</button>
+        <button id="skift">Vis mere</button>
     </p>
 
     <div class="knapover">
-        <button id="btn1" class="treknapper">Ingredienser</button>
-        <button id="btn2" class="treknapper"> Anvendelse</button>
-        <button id="btn3" class="treknapper"> Anmeldelser</button>
+        <button id="btn1ch" class="treknapper">Ingredienser</button>
+        <button id="btn2ch" class="treknapper"> Anvendelse</button>
+        <button id="btn3ch" class="treknapper"> Anmeldelser</button>
     </div>
     <p class="onecolumn mobilmargin" id="test1">
-        Scitec Nutrition's 100% Plant Protein er udvundet af den meget rene
-        belgiske Pisane Pea Protein Isolate, der kommer fra de lokalt voksede
-        gule ærter.
-        <span id="tekst2">
-        Det er et langsomt fordøjeligt protein, der er ideelt til
-        brug efter en træning eller inden du går i seng for at fremme mager
-        muskelvækst og for at hjælpe muskelrestitution.
-    </span><br>
-        <button id="toggle2">Read More</button>
+        Næringsindhold pr. 100g. Energifordeling i varen:<br>
+        Energi: 1541 kJ/366 kcal<br>
+        Fedt: 6,6 g<br>
+        -heraf mættede fedtsyrer: 2,2 g<br>
+        Kulhydrat: 5,9 g<br>
+        -heraf sukkerarter: 2,8 g<br>
+        Protein: 66 g<br>
+        Salt: 1,9 g<br>
+        <br>
+        Variant: Chocolate<br>
+        <br>
+        Ingredienser: Risprotein*, Ærteprotein, Hampeprotein*, Fedtfattigt kakaopulver*,
+        Fortykningsmiddel (xanthangummi) E415, Naturlig aroma, Sødestof (steviolglycosider)
+        E960 *=økologisk
     </p>
     <h3 class="onecolumn andre">Andre har også købt</h3>
     <div class="grid2">
@@ -186,40 +197,45 @@ Navigations bar
 
         $('.sidenav').sidenav(); //fortæller at materilize at vi bruger deres navbar
 
-        $("#toggle").click(function() {
-            var elem = $("#toggle").text();
-            if (elem == "Read More") {
-                //Stuff to do when btn is in the read more state
-                $("#toggle").text("Read Less");
+        $("#skift").click(function() {
+            var elem = $("#skift").text();
+            if (elem === "Vis mere") {
+                //Når Vis mere er vist sker dette
+                $("#skift").text("vis mindre");
                 $("#tekst").slideDown();
             } else {
-                //Stuff to do when btn is in the read less state
-                $("#toggle").text("Read More");
+                //Når Vis mindre er vist sker dette
+                $("#skift").text("Vis mere");
                 $("#tekst").slideUp();
             }
         });
 
-        $("#toggle2").click(function() {
-            var elem = $("#toggle2").text();
-            if (elem == "Read More") {
-                //Stuff to do when btn is in the read more state
-                $("#toggle2").text("Read Less");
-                $("#tekst2").slideDown();
-            } else {
-                //Stuff to do when btn is in the read less state
-                $("#toggle2").text("Read More");
-                $("#tekst2").slideUp();
-            }
-        });
 
-        $("#btn1").click(function(){
-            $("#test1").text("Hello world!");
+        $("#btn1ch").click(function(){
+            $("#test1").html('Næringsindhold pr. 100g. Energifordeling i varen:<br>\n' +
+                '        Energi: 1541 kJ/366 kcal<br>\n' +
+                '        Fedt: 6,6 g<br>\n' +
+                '        -heraf mættede fedtsyrer: 2,2 g<br>\n' +
+                '        Kulhydrat: 5,9 g<br>\n' +
+                '        -heraf sukkerarter: 2,8 g<br>\n' +
+                '        Protein: 66 g<br>\n' +
+                '        Salt: 1,9 g<br>\n' +
+                '        <br>\n' +
+                '        Variant: Chocolate<br>\n' +
+                '        <br>\n' +
+                '        Ingredienser: Risprotein*, Ærteprotein, Hampeprotein*, Fedtfattigt kakaopulver*,\n' +
+                '        Fortykningsmiddel (xanthangummi) E415, Naturlig aroma, Sødestof (steviolglycosider)\n' +
+                '        E960 *=økologisk');
         });
-        $("#btn2").click(function(){
-            $("#test1").text("ghurwhgiorhoi");
+        $("#btn2ch").click(function(){
+            $("#test1").html('Bland i måleske (20g) plantforce synergy til 250-300 ml vand, juice eller i din foretrukne plantedrik.\n' +
+                'Perfekt i shakes,smoothies, pandekager, is, kager og barer. 1-2 gange dagligt, eller i forbindelse med træning.\n' +
+                '\n' +
+                'Opbevaring: køligt, tørt sted væk fra direkte sollys.\n');
         });
-        $("#btn3").click(function(){
-            $("#test1").text("BLAG!");
+        $("#btn3ch").click(function(){
+            $("#test1").html('Ivan R: God smag og gode ingredienser\n' +
+                'En af de bedst smagende veganske proteinpulvere jeg har prøvet og samtidig økologisk!\n');
         });
 
 
